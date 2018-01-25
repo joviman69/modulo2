@@ -1,14 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Curriculum Vitae de Jose Contamina</title>
+    <title>Curriculum Vitae de Jose Contamina</title><meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="Curriculum, CV, Jose, Contamina, Formacion  ">
+    <meta name="author" content="Jose Contamina">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./fonts/VT323/VT323-Regular.ttf">
 </head>
 <body>
-    <h1>Curriculum Vitae Jose Contamina</h1>
+    <nav class="menu">
+        <ul class="menu__list"> 
+            <li class="menu__list__item menu__list__item--active" >
+                <a href="#portada"><i class="fa fa-home" aria-hidden="true"></i> Portada</a>
+            </li>
+            <li class="menu__list__item" >
+                <a href="#quienSoy"><i class="fa fa-male" aria-hidden="true"></i></i> Quien soy</a>
+            </li>
+            <li class="menu__list__item" >
+                <a href="#formacion"><i class="fa fa-book" aria-hidden="true"></i> Formación</a></li>
+            <li class="menu__list__item" ><a href="#experiencia"><i class="fa fa-plane" aria-hidden="true"></i> Experiencia</a>
+            </li>
+            <li class="menu__list__item" >
+                <a href="#sobreMi"><i class="fa fa-tree" aria-hidden="true"></i> Sobre mí</a>
+            </li>
+            <li class="menu__list__item" >
+                <a href="#./contacto.html"><i class="fa fa-envelope" aria-hidden="true"></i> Contacto</a>
+            </li>            
+        </ul>
+    </nav>
+    <header class="header">
+        <div class="header__image"></div>
+        <h1 class="header__text1">Curriculum Vitae</h1>
+        <p class="header__text2">Jose Vicente Contamina Giménez</p>
+        <div class="cursor" width="30" height="30"></div>
+    </header>
+
+    <main class="container">
+            <section id="quien-soy" class="section-container">
+                <div class="about-me clearfix">
+                    <div class="about-me__video">
+                        <video id="video" width="550" height="300" controls>
+                            <source src="./video/batman.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="about-me__info">
+                        <h2>Quien soy</h2>
+                        Batman:
+                        <span class="about-me__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea sint eligendi in, velit distinctio, natus,
+                            eius quae praesentium optio ex consectetur iste fugit harum odit? Soluta laborum aspernatur asperiores
+                            maxime.
+                        </span>
+                    </div>
+                </div>
+            </section>
+    
+    <footer class="footer row-flex">
+        Jose Contamina &copy; 2018 Pŕactica Módulo 2 HTML5, CSS3 y Javascript
+    </footer>
 </body>
-<script src="main.js"></script>
+<script src="./scripts/main.js"></script>
 </html>
