@@ -2,6 +2,11 @@
     src: url("../fonts/VT323/VT323-Regular.ttf");
     font-family: 'VT323';
   }
+
+  @font-face {
+    src: url("../fonts/Amstrad_CPC464_Regular/amstrad_cpc464.ttf");
+    font-family: 'Amstrad';
+  }
   
   
   * {
@@ -13,14 +18,21 @@
   body {
     padding: 0;
     margin: 0;
-    /*background-color: #100063;*/
     background-color: white;
-    font-family: 'VT323';
+    font-family: 'Amstrad';
     --main-text-color: #fbfc08;
     --secondary-text-color: #100063;
   }
   .cursor {
-    background-color: #fbfc08;
+    background-color:var(--secondary-text-color);
+    width: 26px;
+    height: 15px;
+    position: absolute;
+    left: 0px;
+    top: 165px;
+    opacity: 1;
+    animation: cursorAnimation 0.7s;
+    animation-iteration-count: infinite;
   }
 
   .clearfix:after {
@@ -35,10 +47,9 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--secondary-text-color);
-    /*background-color: silver;*/
+    background-color: silver;
     z-index: 1;
-    height: 60px;
+    height: 40px;
   }
   
   .menu > .menu__list {
@@ -50,99 +61,165 @@
   
   .menu > .menu__list > .menu__list__item {
     display: inline-block;
-    font-size: 2.9rem;
-    height: 60px;
+    font-size: 1rem;
+    height: 40px;
+    
   }
   
   .menu > .menu__list > .menu__list__item a {
     display: inline-block;
     text-decoration: none;
-    padding: 10px;
-    color: var(--main-text-color);
-    height: 60px;
-    transition: all 0.5s linear;
+    padding: 13px;
+    color: var(--secondary-text-color);
+    background-color: var(--main-text-color);
+    height: 40px;
+    border-radius: 10px 10px 0px 0px;
+    transition: all 0.3s linear;
   }
   
   .menu > .menu__list > .menu__list__item--active a {
-    color: var(--secondary-text-color);
-    background-color: var(--main-text-color);
-    height: 60px;
+    color: var(--main-text-color);
+    background-color: var(--secondary-text-color);
+    height: 40px;
   }
   
   .menu > .menu__list > .menu__list__item a:hover {
-    color: var(--secondary-text-color);
-    background-color: var(--main-text-color);
-    height: 60px;
+    color: var(--main-text-color);
+    background-color: var(--secondary-text-color);
+    height: 40px;
   }
 
   .header > .header__image {
-    background-image: url(../img/64bk.gif);
+    background-image: url(../img/64ck.gif);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
     height: 100vh;
-    transition: background-size 0.5s;
-  }
+    }
 
   .header > .header__image:hover {
-    
+   
   }
   
   .header > .header__text1 {
     position: absolute;
     left: 0;
-    top: 45%;
+    top: 35%;
     width: 100%;
     color: var(--main-text-color);
     font-family: "VT323";
     text-align: center;
     font-size: 6rem;
-    visibility: hidden;
-    animation: text1Animation 2s forwards;
-    animation-delay: 0.8s;
+    animation: text1Animation 6s forwards;
   }
   
   .header > .header__text2 {
+    overflow-x: hidden;
     position: absolute;
-    top: 60%;
+    left: -2000px;
+    top: 55%;
     width: 100%;
-    color: var(--main-text-color);
+    color: red;
     font-size: 3.2rem;
     font-family: "VT323";
     text-align: center;
-    opacity: 0;
     animation: text2Animation 3s forwards;
-    animation-delay: 1s;
+    animation-delay: 0.8s;
+  }
+
+  .header > .header__text3 {
+    position: absolute;
+    top: 1000px;
+    width: 100%;
+    color: green;
+    font-size: 2rem;
+    font-family: "VT323";
+    text-align: right;
+    opacity: 0;
+    animation: text3Animation 3s forwards;
+    animation-delay: 4s;
+  }
+
+  .quien-soy {    
+    height: 100vh;
+    padding-top: 200px;
+  }
+
+  .quien-soy > .quien-soy__video {
+    top: 80%;    
+    float: right;
+    max-width: 50%;
+  }
+  
+  .quien-soy > .quien-soy__text {
+    font-family: "VT323";
+    color: var(--secondary-text-color);
+    font-size: 2.5rem;
+    /*float: left;*/
+    max-width: 50%;
+  }
+
+  .formacion {    
+    height: 100vh;
+    padding-top: 200px;
+  }
+
+  .sobre-mi {    
+    height: 100vh;
+    padding-top: 200px;
+  }
+
+  @keyframes cursorAnimation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
 @keyframes text1Animation {
   0% {
-    font-size: 200px;
-  }
-  50% {
-    font-size: 180px;
+    font-size: 2px;
   }
   100% {
-    font-size: 100px;
-    visibility: visible;
+    font-size: 150px;
   }
 }
 
 @keyframes text2Animation {
   0% {
-    opacity: 0;
+   left: -10000px;
   }
-  50% {
-    opacity: 0.6;
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes text3Animation {
+  0% {
+   top: 200px:
   }
   100% {
     opacity: 1;
+    top: 100px;
   }
 }
-  
-  .footer {
-    color: var(--main-text-color);
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-  }
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.footer {
+  color: var(--secondary-text-color);
+  padding-top: 10px;
+  background-color: silver;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+ }
