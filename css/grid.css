@@ -1,0 +1,78 @@
+body {
+  --grid-size: 12;
+}
+
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-1 {
+  float: left;
+  width: calc(100% / var(--grid-size));
+}
+.col-2 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 2);
+}
+.col-3 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 3);
+}
+.col-4 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 4);
+}
+.col-5 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 5);
+}
+.col-6 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 6);
+}
+.col-7 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 7);
+}
+.col-8 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 8);
+}
+.col-9 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 9);
+}
+.col-10 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 10);
+}
+.col-11 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 11);
+}
+.col-12 {
+  float: left;
+  width: calc(calc(100% / var(--grid-size)) * 12);
+}
+
+.row-flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+/*
+.transport-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.transport-item > .transport-item__info {
+  align-self: flex-end;
+}
+*/

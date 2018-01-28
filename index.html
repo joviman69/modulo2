@@ -8,6 +8,7 @@
     <meta name="author" content="Jose Contamina">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/grid.css">
     <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     
 </head>
@@ -34,65 +35,60 @@
         <div class="header__image"></div>
         <h1 class="header__text1">Curriculum Vitae</h1>
         <p class="header__text2">Jose Vicente Contamina Giménez</p>
-        <p class="header__text3">...cualquier parecido con la realidad es pura coincidencia.</p>
+        <p class="header__text3">...Retro-homenaje a mi primer ordenador.</p>
         <div class="cursor"></div>
     </header>
 
     <main class="container">
             <section id="quien-soy" class="section-container">
-                    <div class="quien-soy clearfix">
-                        <div class="quien-soy__video">
+                <div class="quien-soy clearfix">
+                        <h2>Quien soy</h2>
+                    <div class="quien-soy__video">
                             <video id="video" width="500" height="500" controls>
                                 <source src="./video/badday.mp4" type="video/mp4">
                             </video>
                         </div>
-                        <h2>Quien soy</h2>
                         <div class="quien-soy__text">
                             
                             <span class="quien-soy__text">No tienes bits corriendo por tus venas si nunca has vivido una 
                                 situación como la del famoso vídeo Bad day de 1997. Algunos lo consideran el primer vídeo 
                                 viral de la historia. Recientemente se ha sabido que todo fue un montaje promocional de 
-                                una empresa de videovigilancia. Si nos fijamos con detalle el teclado está desconectado desde el principio.
+                                una empresa de videovigilancia. Si nos fijamos con atención el teclado está desconectado desde el principio.
                             </span>
                         </div>
                     </div>
                 </section>
 
             <section id="formacion" class="section-container">
-                <h2>Skills</h2>
                 <div class="formacion clearfix">
-                    <img src="./img/html5.png" alt="html5">
-                    <img src="./img/css3.png" alt="css3">
-                    <img src="./img/js280.png" alt="js">
-                    <img src="./img/nodejs.png" alt="node">
-                    <img src="./img/python.png" alt="python">
-                    <img src="./img/ruby.jpg" alt="ruby">
-                    <img src="./img/SQL.png" alt="sql">
-                    <img src="./img/cpp.png" alt="c++">
+                        <h2>Formacion</h2>
+                            <img class="col-3" src="./img/html5.png" alt="html5">
+                            <img class="col-3" src="./img/css3.png" alt="css3">
+                            <img class="col-3" src="./img/js.png" alt="js">
+                            <img class="col-3" src="./img/nodejs.png" alt="node">
+                            <img class="col-3" src="./img/python.png" alt="python">
+                            <img class="col-3" src="./img/ruby.jpg" alt="ruby">
+                            <img class="col-3" src="./img/SQL.png" alt="sql">
+                            <img class="col-3" src="./img/cpp.png" alt="c++">                    
                 </div>
             </section>
 
             <section id="sobre-mi" class="section-container">
-                <h2>Sobre mi</h2>
                 <div class="sobre-mi clearfix">
-                    <div class="sobre-mi_text">
+                        <h2>Sobre mi</h2>
+                    <div class="sobre-mi__text">
                         
                     </div>
                     <div class="sobre-mi__img">
                         <figure>
                             <img src="./img/me.jpg" alt="Jose Contamina" width="500">
-                                <figcaption>Jose Contamina</figcaption>
+                                <figcaption class="figcaption">Jose Contamina</figcaption>
                          </figure>
                         
                     </div>
                 </div>
             </section>
-
-        <section id="sobre-mi" class="section-container">
-            <div class="sobre-mi">
-
-            </div>
-        </section>
+       
     </main>
     <footer class="footer row-flex">
         Jose Contamina &copy; 2018 Practica Modulo 2 HTML5, CSS3 y Javascript
@@ -100,4 +96,5 @@
 </body>
 <script src="./scripts/main.js"></script>
 <script src="./scripts/menu.js"></script>
+<script src="./scripts/full-screen.js"></script>
 </html>
