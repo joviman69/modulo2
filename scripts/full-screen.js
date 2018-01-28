@@ -1,3 +1,5 @@
+/* compatibidad de funcion fullscreen del video entre los diferentes browsers */
+
 var video = document.getElementById("video");
 
 video.addEventListener("click", function(event) {

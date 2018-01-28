@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Curriculum Vitae de Jose Contamina</title><meta name="description" content="Curriculum">
     <meta name="keywords" content="Curriculum, CV, Jose, Contamina, Formacion  ">
@@ -10,95 +10,84 @@
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="stylesheet" type="text/css" href="./css/grid.css">
     <link rel="stylesheet" type="text/css" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/contact.css">
     
 </head>
 <body>
     <nav class="menu">
         <ul class="menu__list"> 
+            <li class="menu__list__item" >
+                <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Portada</a>
+            </li>
+            <li class="menu__list__item" >
+                <a href="index.html#quien-soy"><i class="fa fa-male" aria-hidden="true"></i></i> Quien soy</a>
+            </li>
+            <li class="menu__list__item" >
+                <a href="index.html#formacion"><i class="fa fa-book" aria-hidden="true"></i> Formacion</a></li>
+            <li class="menu__list__item" >
+                <a href="index.html#sobre-mi"><i class="fa fa-plane" aria-hidden="true"></i> Sobre mi</a>
+            </li>
             <li class="menu__list__item menu__list__item--active" >
-                <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Portada</a>
-            </li>
-            <li class="menu__list__item" >
-                <a href="./index.html#quien-soy"><i class="fa fa-male" aria-hidden="true"></i></i> Quien soy</a>
-            </li>
-            <li class="menu__list__item" >
-                <a href="#formacion"><i class="fa fa-book" aria-hidden="true"></i> Formacion</a></li>
-            <li class="menu__list__item" >
-                <a href="#sobre-mi"><i class="fa fa-plane" aria-hidden="true"></i> Sobre mi</a>
-            </li>
-            <li class="menu__list__item" >
-                <a href="./contact.html"><i class="fa fa-envelope" aria-hidden="true"></i> Contacto</a>
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Contacto</a>
             </li>            
         </ul>
     </nav>
-    <header class="header">
-        <div class="header__image"></div>
-        <h1 class="header__text1">Curriculum Vitae</h1>
-        <p class="header__text2">Jose Vicente Contamina Giménez</p>
-        <p class="header__text3">...Retro-homenaje a mi primer ordenador.</p>
-        <div class="cursor"></div>
-    </header>
-
+    
     <main class="container">
-            <section id="quien-soy" class="section-container">
-                <div class="quien-soy clearfix">
-                        <h2 class="sec-font">Quien soy</h2>
-                    <div class="quien-soy__video">
-                            <video id="video" width="500" height="500" controls>
-                                <source src="./video/badday.mp4" type="video/mp4">
-                            </video>
+            <section class="section-container">
+                <h2>Contacto</h2>
+                <div class="contact-form">
+                    <form name="contacto" method="get" novalidate>
+                        <div class="form-row">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
                         </div>
-                        <div class="quien-soy__text">
+                        <div class="form-row">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="text" name="telefono" id="telefono" placeholder="Teléfono" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Email *</label>
+                            <input type="text" id="email" name="email" placeholder="usuario@dominio.com">
+                        </div>
+                        <div class="form-row">
+                            <label for="fuente">Como me has conocido *</label>
+                            <select name="fuente" id="fuente" required>
+                                <option value="facebook">Facebook</option>
+                                <option value="twitter">Twitter</option>
+                                <option value="google">Google</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        <div class="form-row otros-hidden" id="otrosid">
+                                <label for="otros">Especifique donde *</label>
+                                <input type"text" id="otros" name="otros" placeholder="fuente" required>
+                            </div>
+                        <div class="form-row">
+                            <label for="observaciones">Observaciones</label>
+                            <textarea name="observaciones" id="observaciones" placeholder="Máximo 150 palabras" cols="100" rows=15"></textarea>
                             
-                            <span class="quien-soy__text">No tienes bits corriendo por tus venas si nunca has vivido una 
-                                situación como la del famoso vídeo Bad day de 1997. Algunos lo consideran el primer vídeo 
-                                viral de la historia. Recientemente se ha sabido que todo fue un montaje promocional de 
-                                una empresa de videovigilancia. Si nos fijamos con atención el teclado está desconectado desde el principio.
-                            </span>
                         </div>
-                    </div>
-                </section>
-
-            <section id="formacion" class="section-container">
-                <div class="formacion clearfix">
-                        <h2 class="sec-font">Formación</h2>
-                            <img class="col-3" src="./img/html5.png" alt="html5">
-                            <img class="col-3" src="./img/css3.png" alt="css3">
-                            <img class="col-3" src="./img/js.png" alt="js">
-                            <img class="col-3" src="./img/nodejs.png" alt="node">
-                            <img class="col-3" src="./img/python.png" alt="python">
-                            <img class="col-3" src="./img/ruby.jpg" alt="ruby">
-                            <img class="col-3" src="./img/SQL.png" alt="sql">
-                            <img class="col-3" src="./img/cpp.png" alt="c++">                    
+                        <div class="form-row">
+                            <button type="submit" id="enviar">Enviar</button>
+                            <button type="reset" id="reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="form-picture">
+                    <img src="./img/contac.gif" alt="phone-photo">
                 </div>
             </section>
 
-            <section id="sobre-mi" class="section-container">
-                <div class="sobre-mi clearfix">
-                        <h2 class="sec-font">Sobre mí</h2>
-                    <div class="sobre-mi__text">
-                        Nací a finales de los 70 por lo que había muchas posibilidades de que mi primer ordenador fuera un Amstrad. 
-                        En mi caso un CPC 6128 con disquetera de 3". En aquella época no había internet así que la formación 
-                        provenía de libros y revistas que intercambiabamos con familiares y amigos. Los juegos tenían menos colores 
-                        y resolución pero eran igual de adictivos.
-                        
-                    </div>
-                    <div class="sobre-mi__img">
-                        <figure>
-                            <img src="./img/me.jpg" alt="Jose Contamina" width="500">
-                                <figcaption class="figcaption">Jose Contamina</figcaption>
-                         </figure>
-                        
-                    </div>
-                </div>
-            </section>
-       
-    </main>
-    <footer class="footer row-flex">
+</main>
+
+    
+    <footer class="footer">
         Jose Contamina &copy; 2018 Práctica Módulo 2 HTML5, CSS3 y Javascript
     </footer>
 </body>
 <script src="./scripts/main.js"></script>
-<script src="./scripts/menu.js"></script>
-<script src="./scripts/full-screen.js"></script>
+<script src="./scripts/form.js"></script>
+
 </html>

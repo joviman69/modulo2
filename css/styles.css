@@ -258,13 +258,14 @@ margin: 0px 0px 150px 0px;
   padding: 50px 0;
 }
 
-h2 {
+.sec-font {
   font-family: "VT323";
   font-size: 2.5rem;
 }
 
 .footer {
   color: var(--secondary-text-color);
+  width: 100%;
   font-family: "VT323";
   font-size: 2.5rem;
   padding-top: 10px;
