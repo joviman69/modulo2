@@ -1,7 +1,29 @@
+input:invalid {
+  background-color: pink;
+}
+
+input:valid {
+ background-color: lightgreen;
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+  color: var(--secondary-text-color);
+  width: 100%;
+  font-family: "VT323";
+  font-size: 2.5rem;
+  padding-top: 10px;
+  background-color: silver;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+ }
+
 .form-picture img  {
   position: relative;
   top: 20px;
-  height: 500px;
+  height: 300px;
   border-radius: 5%;
   border: 3px solid black ;
   box-shadow: 10px 10px grey;
@@ -13,8 +35,8 @@
 
 }
 
-.form .form-row {
-  padding: 0.8rem;
+.form-row {
+  padding: 0.4rem;
 }
 
 input {
@@ -60,6 +82,11 @@ select[name="fuente"] {
 button[disabled] {
   opacity: 0.5;
 }
+
+.observaciones {
+  top: 0px;
+}
+
 /*
 table {
   width: 100%;

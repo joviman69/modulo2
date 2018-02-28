@@ -23,17 +23,22 @@ body {
   --main-text-color: #fbfc08;
   --secondary-text-color: #100063;
 }
+
+
+/*
 .cursor {
   background-color: var(--secondary-text-color);
   width: 26px;
   height: 15px;
   position: absolute;
   left: 0px;
-  top: 165px;
+  top: 167px;
   opacity: 1;
   animation: cursorAnimation 0.7s;
   animation-iteration-count: infinite;
 }
+*/
+
 
 .clearfix:after {
   content: " "; /* Older browser do not support empty content */
@@ -89,7 +94,7 @@ body {
 }
 
 .header > .header__image {
-  background-image: url(../img/64ck.gif);
+  background-image: url(../img/Cpc6128_animated.gif);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -183,7 +188,7 @@ margin: 0px 0px 150px 0px;
 }
 
 .sobre-mi .sobre-mi__img img{
-  border-radius: 50% 50% 50% 1%;
+  border-radius: 50% 50% 50% 50%;
   float: left;
   max-width: 50%;
 }

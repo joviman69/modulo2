@@ -38,39 +38,40 @@
                 <h2>Contacto</h2>
                 <div class="contact-form">
                     <form name="contacto" method="get" novalidate>
-                        <div class="form-row">
-                            <label for="nombre">Nombre *</label>
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                        <div class="form-row">Nombre
+                            <!--<label for="nombre">Nombre *</label>-->
+                            <input type="text" pattern="[a-zA-Z .]+" name="nombre" id="nombre" title="Ej: John Snow" placeholder="Nombre" required>
                         </div>
-                        <div class="form-row">
-                            <label for="telefono">Teléfono *</label>
-                            <input type="text" name="telefono" id="telefono" placeholder="Teléfono" required>
+                        <div class="form-row">Teléfono
+                            <!--<label for="telefono">Teléfono *</label>-->
+                            <input type="text" pattern="^[9876]{1}\d{8}$" name="telefono" id="telefono" title="Ej: 900000000" placeholder="Teléfono" required>
                         </div>
-                        <div class="form-row">
-                            <label for="email">Email *</label>
-                            <input type="text" id="email" name="email" placeholder="usuario@dominio.com">
+                        <div class="form-row">Email
+                            <!--<label for="email">Email *</label>-->
+                            <input type="email" id="email" name="email" title="Ej: john.snow@stark.win" placeholder="Email" required>
                         </div>
-                        <div class="form-row">
-                            <label for="fuente">Como me has conocido *</label>
+                        <div class="form-row">¿Cómo me has conocido? *
+                            <!--<label for="fuente">¿Cómo me has conocido? *</label>-->
                             <select name="fuente" id="fuente" required>
                                 <option value="facebook">Facebook</option>
                                 <option value="twitter">Twitter</option>
-                                <option value="google">Google</option>
+                                <option value="linkedin">Linkedin</option>
+                                <option value="googlePlus">Google+</option>
                                 <option value="otros">Otros</option>
+
                             </select>
                         </div>
-                        <div class="form-row otros-hidden" id="otrosid">
-                                <label for="otros">Especifique donde *</label>
-                                <input type"text" id="otros" name="otros" placeholder="fuente" required>
+                        <div class="form-row otros-hidden" id="div_otros">Especifica como *
+                                <!--<label for="otros">Especifica donde *</label>-->
+                                <input type="text" id="otros" name="otros" title="Ej: Foros" placeholder="Origen" required>
                             </div>
-                        <div class="form-row">
-                            <label for="observaciones">Observaciones</label>
-                            <textarea name="observaciones" id="observaciones" placeholder="Máximo 150 palabras" cols="100" rows=15"></textarea>
-                            
+                        <div class="form-row observaciones">Observaciones
+                            <!--<label for="observaciones">Observaciones</label>-->
+                            <textarea name="observaciones" id="observaciones" title="Máximo 150 palabras" placeholder="Observaciones" rows="10" cols="60"></textarea>
                         </div>
                         <div class="form-row">
                             <button type="submit" id="enviar">Enviar</button>
-                            <button type="reset" id="reset">Reset</button>
+                            <button type="reset" id="resetbut">Reset</button>
                         </div>
                     </form>
                 </div>
@@ -83,11 +84,12 @@
 </main>
 
     
-    <footer class="footer">
-        Jose Contamina &copy; 2018 Práctica Módulo 2 HTML5, CSS3 y Javascript
-    </footer>
-</body>
-<script src="./scripts/main.js"></script>
-<script src="./scripts/form.js"></script>
+<footer class="footer">
+    Jose Contamina &copy; 2018 Práctica Módulo 2 HTML5, CSS3 y Javascript
+</footer>
 
+</body>
+<script src="./scripts/form.js"></script>
+<script src="./scripts/notifications.js"></script>
+<script src="./scripts/ajax.js"></script>
 </html>
