@@ -1,4 +1,10 @@
-# Práctica módulo 2 HTML5, CSS3, JavaScript
+# Práctica módulo 2 HTML5, CSS3, JavaScript 
+
+### Para su correcto funcionameninto es necesario correr el servidor sparrest de Alberto Casero en localhost:8000
+
+##### Puedes encontarlo en https://github.com/kasappeal/sparrest
+
+
  
 -Contiene vídeo 
 
