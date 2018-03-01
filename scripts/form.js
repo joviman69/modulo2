@@ -68,12 +68,25 @@ form.addEventListener("submit", function(e) {
   }
     
   submitButton.setAttribute("disabled", "");
+  e.preventDefault();
+  
+  var data = {
+    nombre: nombreInput.value,
+    telefono: telefonoInput.value,
+    email: emailInput.value,
+    fuente: fuenteInput.value,
+    otros: otrosInput.value,
+    observaciones: observacionesInput.value
+  };
 
-  setTimeout(() => { 
-    form.reset();
-    sendNotification("Formulario recibido correctamente", "Gracias por su interés");
-    submitButton.removeAttribute("disabled", "");  
-    } , 1000);
+    createData(data);
+  
+    setTimeout(() => { 
+      getData();
+      form.reset();
+      sendNotification("Formulario recibido correctamente", "Gracias por su interés");
+      submitButton.removeAttribute("disabled", "");  
+      } , 1000);
   
 });
 
